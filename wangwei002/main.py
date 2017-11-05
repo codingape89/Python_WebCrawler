@@ -93,6 +93,8 @@ for one_exponentTypeId in list_exponentTypeId:
     # print page
     this_data = helper.getdata_from_soup(page, paralist)
     helper.add_list(all_data_result, this_data)
+helper.write_excel2007('print/5-total.xlsx', all_data_result)
+resetResultList()
 
 # query main type 2
 resetParas()
@@ -109,6 +111,8 @@ for one_exponentTypeId in list_exponentTypeId:
         # print page
         this_data = helper.getdata_from_soup(page, paralist)
         helper.add_list(all_data_result, this_data)
+helper.write_excel2007('print/4-transtype.xlsx', all_data_result)
+resetResultList()
 
 # query main type 3
 resetParas()
@@ -125,6 +129,8 @@ for one_exponentTypeId in list_exponentTypeId:
         # print page
         this_data = helper.getdata_from_soup(page, paralist)
         helper.add_list(all_data_result, this_data)
+helper.write_excel2007('print/3-attribution.xlsx', all_data_result)
+resetResultList()
 
 # query main type 4
 resetParas()
@@ -141,10 +147,9 @@ for one_exponentTypeId in list_exponentTypeId:
         # print page
         this_data = helper.getdata_from_soup(page, paralist)
         helper.add_list(all_data_result, this_data)
-
-helper.write_excel2007('report_else.xlsx', all_data_result)
-
+helper.write_excel2007('print/2-city.xlsx', all_data_result)
 resetResultList()
+
 # query main type 5
 resetParas()
 one_attribute1 = list_attribute1[0]
@@ -165,6 +170,6 @@ for one_exponentTypeId in list_exponentTypeId:
             helper.add_list(all_data_result, this_data)
         if len(all_data_result) >= 10000:
             print '--------begin to make excel--------'
-            helper.write_excel2007('report_city_to_city_"+counter+".xlsx', all_data_result)
-            counter += 1
+            helper.write_excel2007('print/1-city_to_city_"+counter+".xlsx', all_data_result)
             resetResultList()
+            counter += 1
