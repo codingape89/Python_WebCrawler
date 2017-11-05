@@ -97,41 +97,41 @@ for one_exponentTypeId in list_exponentTypeId:
 helper.write_excel2007('print/5-total.xlsx', all_data_result)
 resetResultList()
 
-# # query main type 2
-# resetParas()
-# one_attribute1 = list_attribute1[3]
-# print "开始处理： 大类=" + one_attribute1[0] + ' - ' + one_attribute1[1]
-# attribute1 = one_attribute1[0]
-# for one_exponentTypeId in list_exponentTypeId:
-#     for one_cateId in list_cateId:
-#         print "----------" + one_exponentTypeId[0] + ' - ' + one_exponentTypeId[1] + " | " + one_cateId[0] + ' - ' + one_cateId[1]
-#         exponentTypeId = one_exponentTypeId[0]
-#         cateId = one_cateId[0]
-#         paralist = initParas()
-#         page = helper.getsoup_by_query2(str(requesturl), paralist )
-#         # print page
-#         this_data = helper.getdata_from_soup(page, paralist)
-#         helper.add_list(all_data_result, this_data)
-# helper.write_excel2007('print/4-transtype.xlsx', all_data_result)
-# resetResultList()
-#
-# # query main type 3
-# resetParas()
-# one_attribute1 = list_attribute1[2]
-# print "开始处理： 大类=" + one_attribute1[0] + ' - ' + one_attribute1[1]
-# attribute1 = one_attribute1[0]
-# for one_exponentTypeId in list_exponentTypeId:
-#     for one_attribute2 in list_attribute2:
-#         print "----------" + one_exponentTypeId[0] + ' - ' + one_exponentTypeId[1] + " | " + one_attribute2
-#         exponentTypeId = one_exponentTypeId[0]
-#         attribute2 = one_attribute2
-#         paralist = initParas()
-#         page = helper.getsoup_by_query2(str(requesturl), paralist )
-#         # print page
-#         this_data = helper.getdata_from_soup(page, paralist)
-#         helper.add_list(all_data_result, this_data)
-# helper.write_excel2007('print/3-attribution.xlsx', all_data_result)
-# resetResultList()
+# query main type 2
+resetParas()
+one_attribute1 = list_attribute1[3]
+print "开始处理： 大类=" + one_attribute1[0] + ' - ' + one_attribute1[1]
+attribute1 = one_attribute1[0]
+for one_exponentTypeId in list_exponentTypeId:
+    for one_cateId in list_cateId:
+        print "----------" + one_exponentTypeId[0] + ' - ' + one_exponentTypeId[1] + " | " + one_cateId[0] + ' - ' + one_cateId[1]
+        exponentTypeId = one_exponentTypeId[0]
+        cateId = one_cateId[0]
+        paralist = initParas()
+        page = helper.getsoup_by_query2(str(requesturl), paralist )
+        # print page
+        this_data = helper.getdata_from_soup(page, paralist)
+        helper.add_list(all_data_result, this_data)
+helper.write_excel2007('print/4-transtype.xlsx', all_data_result)
+resetResultList()
+
+# query main type 3
+resetParas()
+one_attribute1 = list_attribute1[2]
+print "开始处理： 大类=" + one_attribute1[0] + ' - ' + one_attribute1[1]
+attribute1 = one_attribute1[0]
+for one_exponentTypeId in list_exponentTypeId:
+    for one_attribute2 in list_attribute2:
+        print "----------" + one_exponentTypeId[0] + ' - ' + one_exponentTypeId[1] + " | " + one_attribute2
+        exponentTypeId = one_exponentTypeId[0]
+        attribute2 = one_attribute2
+        paralist = initParas()
+        page = helper.getsoup_by_query2(str(requesturl), paralist )
+        # print page
+        this_data = helper.getdata_from_soup(page, paralist)
+        helper.add_list(all_data_result, this_data)
+helper.write_excel2007('print/3-attribution.xlsx', all_data_result)
+resetResultList()
 
 # query main type 4
 resetParas()
