@@ -85,7 +85,7 @@ def getdata_from_soup(page, paralist):
         for para in paralist:
             row_list.append(para[1])
         row_list.append(dataresult[i]['exp1'])
-        row_list.append(dataresult[i]['exp2'])
+        row_list.append(dataresult[i]['chain'])
         row_list.append(dataresult[i]['year'])
         row_list.append(dataresult[i]['cycle'])
         row_list.append(dataresult[i]['periodTime'])
