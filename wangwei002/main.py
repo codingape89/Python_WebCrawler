@@ -171,6 +171,8 @@ for one_exponentTypeId in list_exponentTypeId:
             helper.add_list(all_data_result, this_data)
         if len(all_data_result) >= 10000:
             print '--------begin to make excel--------'
-            helper.write_excel2007('print/1-city_to_city_"+counter+".xlsx', all_data_result)
+            helper.write_excel2007('print/1-city_to_city_'+str(counter)+'.xlsx', all_data_result)
             resetResultList()
             counter += 1
+if len(all_data_result) >= 0:
+    helper.write_excel2007('print/1-city_to_city_'+str(counter)+'.xlsx', all_data_result)
